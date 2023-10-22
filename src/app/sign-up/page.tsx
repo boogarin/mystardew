@@ -1,26 +1,17 @@
 "use client"
 
-import LanguageDropdown from "@/components/LanguageDropdown";
-import ButtonSV from "@/components/ui/ButtonSV";
 import ContainerSV from "@/components/ui/ContainerSV";
+import HeaderAuth from "@/components/ui/HeaderAuth";
 import Image from "next/image";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 
 export default function StardewHome() {
     return (
-        <div className="flex w-screen h-screen bg-[url('/assets/bg-light.png')] dark:bg-[url('/assets/bg-dark.png')] bg-cover bg-center justify-center pt-4 sm:pt-0 sm:items-center">
+        <div className="flex w-screen h-screen bg-[url('/assets/bg-light.png')] dark:bg-[url('/assets/bg-dark.png')] bg-cover bg-center justify-center pt-20 sm:pt-4 sm:items-center">
+            <HeaderAuth/>
             <div className="flex-col">
                 <div className="flex-col p-4">
-                    <Link href={'/'} className='flex justify-center pb-5'>
-                    <Image
-                    src="/assets/logo.png"
-                    width={199}
-                    height={60}
-                    alt="Stardew Valley"
-                    unoptimized={true}
-                    />
-                    </Link>
                     <ContainerSV>
                         <Link href={'/'}><p className="font-bold text-[#663300] mb-2">← <FormattedMessage id="back"/></p></Link>
                         <div className="px-4 py-2 flex-col">
@@ -45,11 +36,9 @@ export default function StardewHome() {
                         </div>
                     </ContainerSV>
                 </div>
-            </div>
-            
-            <LanguageDropdown/>
-            <div className='absolute bottom-4 left-5 lg:left-auto text-[14px] text-white font-medium'>
+                <div className='mt-5 text-center sm:absolute sm:bottom-4 sm:right-4 text-[14px] text-white font-medium'>
                 <FormattedMessage id="madeBy"/>
+                </div>
             </div>
         </div>
     )

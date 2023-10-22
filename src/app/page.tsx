@@ -2,6 +2,7 @@
 
 import LanguageDropdown from '@/components/LanguageDropdown'
 import ButtonSV from '@/components/ui/ButtonSV'
+import Header from '@/components/ui/Header'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -12,7 +13,8 @@ export default function Home() {
   const [effect, setEffect] = useState(false);
 
   return (
-    <div className="flex bg-[url('/assets/bg-light.png')] dark:bg-[url('/assets/bg-dark.png')] bg-cover bg-center w-screen h-screen justify-center pt-5 sm:pb-[60px] sm:items-center">
+    <div className="flex bg-[url('/assets/bg-light.png')] dark:bg-[url('/assets/bg-dark.png')] bg-cover bg-center w-screen h-screen justify-center pt-24 sm:pt-4 sm:pb-[60px] sm:items-center">
+      <Header/>
       <Image className="z-20 fixed top-10 right-0 animate-bird-slide" onClick={() => {setEffect(true)}} onAnimationEnd={() => setEffect(false)} alt='Birb' src={'/assets/props/stardew_bird.gif'} width={60} height={54}/>
       <Image className="z-0 pointer-events-none absolute top-0 animate-pulse left-0 hidden dark:flex h-auto" alt='Stars' src={'/assets/props/stars.png'} width={1119} height={54}/>
       <Image className="z-0 pointer-events-none absolute top-0 animate-pulse duration-800 right-0 hidden dark:flex h-auto" alt='Stars' src={'/assets/props/stars2.png'} width={1119} height={54}/>
@@ -90,10 +92,9 @@ export default function Home() {
             <p className='text-[#663300] text-opacity-50'><FormattedMessage id="lnDate3"/></p>
           </div>
         </div>
-        <LanguageDropdown/>
-      </div>
-      <div className='absolute bottom-4 left-5 lg:left-auto text-[14px] text-white font-medium'>
+        <div className='mt-5 text-center sm:absolute sm:bottom-4 sm:right-4 text-[14px] text-white font-medium'>
         <FormattedMessage id="madeBy"/>
+        </div>
       </div>
     </div>
   )

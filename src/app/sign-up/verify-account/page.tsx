@@ -9,13 +9,13 @@ import { FormattedMessage } from "react-intl";
 
 export default function StardewHome() {
     return (
-        <div className="flex w-screen h-screen bg-[url('/assets/bg-light.png')] dark:bg-[url('/assets/bg-dark.png')] bg-cover bg-center justify-center pt-4 sm:pt-0 sm:items-center">
+        <div className="flex w-screen h-screen bg-[url('/assets/bg-light.png')] dark:bg-[url('/assets/bg-dark.png')] bg-cover bg-center justify-center pt-4 sm:pt-0 pb-10 sm:items-center">
             <div className="flex-col">
                 <div className="flex-col p-4">
                     <Link href={'/'} className='flex justify-center pb-5'>
                     <Image
                     src="/assets/logo.png"
-                    width={199}
+                    width={140}
                     height={60}
                     alt="Stardew Valley"
                     unoptimized={true}
@@ -40,11 +40,9 @@ export default function StardewHome() {
                         </div>
                     </ContainerSV>
                 </div>
-            </div>
-            
-            <LanguageDropdown/>
-            <div className='absolute bottom-4 left-5 lg:left-auto text-[14px] text-white font-medium'>
+                <div className='mt-5 text-center sm:absolute sm:bottom-4 sm:right-4 text-[14px] text-white font-medium'>
                 <FormattedMessage id="madeBy"/>
+                </div>
             </div>
         </div>
     )

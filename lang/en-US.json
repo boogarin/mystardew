@@ -17,6 +17,8 @@
     "login_password": "Password",
     "login_button": "Enter",
     "login_forgot": "Forgot your password?",
+    "login_signup": "Don't have an account?",
+    "login_signup2": "Sign up now!",
 
     "recover": "Recover password",
     "recover_button": "Send",
@@ -30,7 +32,7 @@
     "signup_password": "Password",
     "signup_button": "Create account",
     "signup_login": "Already have an account?",
-    "signup_login2": "Sign in",
+    "signup_login2": "Sign in!",
 
     "verify_account": "Verify e-mail"
 }
