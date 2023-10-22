@@ -11,7 +11,8 @@ export default function LanguageDropdown() {
            border-4 border-t-[#FA9305] border-l-[#B14E05] border-r-[#B14E05] border-b-[#853605] bg-[#FFD789] font-inter
            hover:bg-[#facf78] active:border-[3px] active:border-t-[#B14E05] ease-in-out duration-100 active:bg-[#DD8254] focus:bg-[#ffbb6d] active:text-[#fdeaec]
            selection:hover:bg-red-600'
-           value={context.language} onChange={context.selectLanguage}>
+           value={1} onChange={context.selectLanguage}>
+            <option value="1" disabled={true}>Selecione</option>
             <option value="en-US">
                 English
             </option>

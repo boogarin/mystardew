@@ -40,7 +40,7 @@ const LanguageProvider = ({children} : { children: ReactNode }) => {
 
   return (
     <LanguageContext.Provider value={{ language, selectLanguage }}>
-      <IntlProvider locale={language} defaultLocale={defaultLocale} messages={messages}>
+      <IntlProvider locale={language} defaultLocale={region} messages={messages}>
         {children}
       </IntlProvider>
     </LanguageContext.Provider>

@@ -8,5 +8,29 @@
     "lnDate1": "05/10",
     "lnDate2": "03/10",
     "lnDate3": "27/09",
-    "madeBy": "feito com ♥ por boogarino"
+    "madeBy": "feito com ♥ por boogarino",
+
+    "back": "Voltar",
+
+    "login": "Login",
+    "login_email": "E-mail ou usuário",
+    "login_password": "Senha",
+    "login_button": "Entrar",
+    "login_forgot": "Esqueceu sua senha?",
+
+    "recover": "Recuperar senha",
+    "recover_button": "Enviar",
+
+    "define_password": "Nova senha",
+    "define_button": "Concluir",
+
+    "signup": "Criar uma conta",
+    "signup_user": "Nome de usuário",
+    "signup_email": "E-mail",
+    "signup_password": "Senha",
+    "signup_button": "Criar conta",
+    "signup_login": "Já possui uma conta?",
+    "signup_login2": "Entre",
+
+    "verify_account": "Verificar e-mail"
 }
