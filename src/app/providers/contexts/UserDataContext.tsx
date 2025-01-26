@@ -42,7 +42,7 @@ const UserDataProvider: React.FC<UserDataProviderProps> = ({ children }) => {
     useEffect(() => {
       const cacheEffect = JSON.stringify(localStorage.getItem("base64"))
 
-      if (cacheEffect !== null) {
+      if (cacheEffect) {
         importDataFromCode(cacheEffect)
       }
     },[])
