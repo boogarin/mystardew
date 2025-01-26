@@ -33,13 +33,18 @@ const UserDataProvider: React.FC<UserDataProviderProps> = ({ children }) => {
     };
   
     const importDataFromCode = (code: string) => {
-      const decodedString = Base64.decode(code);
-      const parsedData = JSON.parse(decodedString);
-      setUserData(parsedData);
+      try {
+        const decodedString = Base64.decode(code);
+        const parsedData = JSON.parse(decodedString);
+        setUserData(parsedData);
+      } catch {
+        console.log("Erro!")
+      }
+      
     };
 
     useEffect(() => {
-      const cacheEffect = JSON.stringify(localStorage.getItem("base64"))
+      const cacheEffect = localStorage.getItem("base64")
       if (cacheEffect) {
         importDataFromCode(cacheEffect)
       }
