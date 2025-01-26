@@ -19,7 +19,7 @@ export default function SV() {
         if (userData.nome) {
           exportDataAsCode(); // Chama a exportação assim que userData mudar
         }
-      }, [userData]);
+      }, [userData, exportDataAsCode]);
 
     return (
         <div className="flex bg-[url('/assets/bg-light.png')] dark:bg-[url('/assets/bg-dark.png')] bg-cover bg-center min-h-screen justify-center">
