@@ -34,6 +34,7 @@ export default function SV() {
                 <button onClick={exportDataAsCode}>Exportar como Código</button>
                 {encodedCode && <p>Código Base64: {encodedCode}</p>}
                 <input
+                defaultValue={"eyJub21lIjoidGVzdGUxMjMifQ=="}
                 placeholder="Cole o código para importar"
                 onBlur={(e) => handleImport(e.target.value)}
                 />
