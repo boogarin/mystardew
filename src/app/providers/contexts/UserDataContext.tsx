@@ -38,8 +38,19 @@ const UserDataProvider: React.FC<UserDataProviderProps> = ({ children }) => {
       setUserData(parsedData);
     };
 
+    const isLocalStorageAvailable = () => {
+      try {
+          const testKey = 'test';
+          localStorage.setItem(testKey, testKey);
+          localStorage.removeItem(testKey);
+          return true;
+      } catch (e) {
+          return false;
+      }
+    };
+
     useEffect(() => {
-      if (typeof window !== 'undefined') {
+      if (isLocalStorageAvailable()) {
         const cacheEffect = JSON.stringify(localStorage.getItem("base64"))
 
         if (cacheEffect) {
