@@ -1,6 +1,6 @@
 "use client"
 
-import { cache, createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { Base64 } from 'js-base64';
 
 interface UserData {
@@ -33,17 +33,18 @@ const UserDataProvider: React.FC<UserDataProviderProps> = ({ children }) => {
     };
   
     const importDataFromCode = (code: string) => {
-        const cache = JSON.stringify(localStorage.getItem("base64"))
-          const decodedString = Base64.decode(code);
-          const parsedData = JSON.parse(decodedString);
-          setUserData(parsedData);
+      const decodedString = Base64.decode(code);
+      const parsedData = JSON.parse(decodedString);
+      setUserData(parsedData);
     };
 
     useEffect(() => {
-      const cacheEffect = JSON.stringify(localStorage.getItem("base64"))
+      if (typeof window !== 'undefined') {
+        const cacheEffect = JSON.stringify(localStorage.getItem("base64"))
 
-      if (cacheEffect) {
-        importDataFromCode(cacheEffect)
+        if (cacheEffect) {
+          importDataFromCode(cacheEffect)
+        }
       }
     },[])
   
